@@ -1,0 +1,13 @@
+Backend
+1. python -m venv env
+2. env\Scripts\activate.bat
+3. pip install djangorestframework djangorestframework-simplejwt
+4. pip install django
+5. django-admin startproject backend
+6. pip install mysqlclient
+7. pip install django-cors-headers
+8. python manage.py create_groups
+
+Frontend
+1. npx create-react-app frontend
+2 npm install axios jsonwebtoken redux react-redux @reduxjs/toolkit bootstrap react-router-dom
