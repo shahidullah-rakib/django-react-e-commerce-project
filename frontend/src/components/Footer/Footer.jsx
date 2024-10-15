@@ -1,19 +1,14 @@
+// components/Footer.js
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container } from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <Navbar
-      // bg="dark"
-      // variant="dark"
-      fixed="bottom"
-      className="justify-content-center"
-    >
+    <footer className="bg-dark text-white text-center py-3 w-100">
       <Container>
-        <Navbar.Text>© 2024 Admin Dashboard. All rights reserved.</Navbar.Text>
+        <p className="mb-0">© 2024 Admin Panel. All Rights Reserved.</p>
       </Container>
-    </Navbar>
+    </footer>
   );
 };
 

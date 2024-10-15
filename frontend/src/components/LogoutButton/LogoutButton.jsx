@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../../redux/slices/userSlice';
 
-const LogoutButton = () => {
+const LogoutButton = (className) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -12,8 +12,8 @@ const LogoutButton = () => {
     navigate('/');
   };
   return (
-    <div onClick={handleLogout} className="btn btn-primary">
-      <button>Logout</button>
+    <div onClick={handleLogout} className={`${className}`}>
+      Logout
     </div>
   );
 };

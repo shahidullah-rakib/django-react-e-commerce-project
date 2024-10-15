@@ -1,31 +1,23 @@
-// Admins.jsx
+// pages/Admins.js
 import React from 'react';
-import SideNavigation from '../../components/SideNavigation/SideNavigation';
-import Footer from '../../components/Footer/Footer';
-import TopNavBar from '../../components/TopNavBar/TopNavBar';
-import LogoutButton from '../../components/LogoutButton/LogoutButton';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Row, Col } from 'react-bootstrap';
+import Sidebar from './../../components/Sidebar/Sidebar';
+import Header from './../../components/Header/Header';
+import Footer from './../../components/Footer/Footer';
+import MainContent from './../../components/MainContent/MainContent';
 
 const Admins = () => {
   return (
-    <div>
-      <TopNavBar />
-      <Container fluid>
-        <Row>
-          <Col md={2} className="p-0">
-            <SideNavigation />
-          </Col>
-          <Col md={10} className="p-4" style={{ marginLeft: '200px' }}>
-            <LogoutButton />
-            <h1>Admins Dashboard</h1>
-            {/* Add more content for your dashboard here */}
-          </Col>
-        </Row>
-      </Container>
-      <Footer />
-    </div>
+    <Container fluid className="d-flex flex-column min-vh-100 p-0">
+      <Row className="flex-grow-1 m-0">
+        <Sidebar />
+        <Col md={{ span: 10, offset: 2 }} className="main-content p-0">
+          <Header />
+          <MainContent />
+          <Footer />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
