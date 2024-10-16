@@ -2,7 +2,7 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 
-const Sidebar = () => {
+const Sidebar = ({ activePage, setActivePage }) => {
   return (
     <Col
       md={2}
@@ -27,21 +27,60 @@ const Sidebar = () => {
         </div>
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a
+              href="#dashboard"
+              className={`nav-link ${
+                activePage === 'dashboard' ? 'active bg-primary text-white' : ''
+              }`}
+              onClick={() => setActivePage('dashboard')}
+            >
               Dashboard
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a
+              href="#shop"
+              className={`nav-link ${
+                activePage === 'shop' ? 'active bg-primary text-white' : ''
+              }`}
+              onClick={() => setActivePage('shop')}
+            >
+              Shop
+            </a>
+          </li>
+          <li className="nav-item">
+            <a
+              href="#widgets"
+              className={`nav-link ${
+                activePage === 'widgets' ? 'active bg-primary text-white' : ''
+              }`}
+              onClick={() => setActivePage('widgets')}
+            >
               Widgets
             </a>
           </li>
           <li className="nav-item">
-            <a href="#" className="nav-link">
+            <a
+              href="#elements"
+              className={`nav-link ${
+                activePage === 'elements' ? 'active bg-primary text-white' : ''
+              }`}
+              onClick={() => setActivePage('elements')}
+            >
               Elements
             </a>
           </li>
-          {/* Add more items as needed */}
+          <li className="nav-item">
+            <a
+              href="#setting"
+              className={`nav-link ${
+                activePage === 'setting' ? 'active bg-primary text-white' : ''
+              }`}
+              onClick={() => setActivePage('setting')}
+            >
+              Setting
+            </a>
+          </li>
         </ul>
       </div>
     </Col>

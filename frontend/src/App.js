@@ -10,6 +10,10 @@ import Customers from './pages/Customers/Customers';
 import Admins from './pages/Admins/Admins';
 import Operators from './pages/Operators/Operators';
 import CategoryUpdateForm from './components/CategoryUpdateForm/CategoryUpdateForm';
+import Shop from './pages/Shop/Shop';
+import Setting from './pages/Setting/Setting';
+import CategoryTable from './components/CategoryTable/CategoryTable';
+import ProductTable from './components/ProductTable/ProductTable';
 
 function App() {
   return (
@@ -60,6 +64,10 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/category-table" element={<CategoryTable />} />
+          <Route path="/product-table" element={<ProductTable />} />
+          <Route path="/setting" element={<Setting />} />
         </Routes>
       </Router>
     </Provider>
