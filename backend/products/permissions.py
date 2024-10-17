@@ -6,7 +6,7 @@ class IsAdmin(BasePermission):
 
 class IsOperatorOrAdmin(BasePermission):
     def has_permission(self, request, view):
-        return (request.user and request.user.groups.filter(name='Operator').exists()) or request.user.is_superuser
+        return (request.user and request.user.groups.filter(name='Operator').exists()) or request.user.is_superuser or request.user.groups.filter(name='Admin').exists()
 
 class IsCustomer(BasePermission):
     def has_permission(self, request, view):

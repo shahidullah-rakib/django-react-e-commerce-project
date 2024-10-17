@@ -29,6 +29,7 @@ const Login = () => {
           navigate('/admin-dashboard');
         } else if (res.roles.includes('Operator')) {
           navigate('/operator-dashboard');
+          // navigate('/admin-dashboard');
         } else if (res.roles.includes('Customer')) {
           navigate('/customer-dashboard');
         } else {

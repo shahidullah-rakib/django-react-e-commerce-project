@@ -12,38 +12,6 @@ export const fetchCategories = async (token) => {
   return response.data;
 };
 
-// // Add a category
-// export const addCategory = async (categoryData, token) => {
-//   const response = await axios.post(API_URL, categoryData, {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//   return response.data;
-// };
-
-// // Update a category
-// export const updateCategory = async (categoryId, categoryData, token) => {
-//   const response = await axios.put(`${API_URL}${categoryId}/`, categoryData, {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//   return response.data;
-// };
-
-// // Delete a category
-// export const deleteCategory = async (categoryId, token) => {
-//   const response = await axios.delete(`${API_URL}${categoryId}/`, {
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//     },
-//   });
-//   return response.data;
-// };
-
 // Add a category
 export const addCategory = async (categoryData, token) => {
   try {
