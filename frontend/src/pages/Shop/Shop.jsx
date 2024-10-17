@@ -24,11 +24,11 @@ const Shop = ({ setActivePage }) => {
         {/* Category Card */}
         <Col md={6}>
           <Card className="h-100 shadow-sm border-0 hover-card">
-            <Card.Img
+            {/* <Card.Img
               variant="top"
               src="https://via.placeholder.com/300x200"
               alt="Category"
-            />
+            /> */}
             <Card.Body className="text-center">
               <Card.Title>Category</Card.Title>
               <Card.Text>
@@ -45,11 +45,11 @@ const Shop = ({ setActivePage }) => {
         {/* Products Card */}
         <Col md={6}>
           <Card className="h-100 shadow-sm border-0 hover-card">
-            <Card.Img
+            {/* <Card.Img
               variant="top"
               src="https://via.placeholder.com/300x200"
               alt="Products"
-            />
+            /> */}
             <Card.Body className="text-center">
               <Card.Title>Products</Card.Title>
               <Card.Text>
