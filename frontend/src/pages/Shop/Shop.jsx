@@ -1,7 +1,22 @@
 import React from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-const Shop = () => {
+const Shop = ({ setActivePage }) => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  // Function to handle navigation and state change for category
+  const handleCategoryClick = () => {
+    setActivePage('category-table');
+    navigate('/admin-dashboard/shop/category-table'); // Update URL
+  };
+
+  // Function to handle navigation and state change for products
+  const handleProductClick = () => {
+    setActivePage('product-table');
+    navigate('/admin-dashboard/shop/product-table'); // Update URL
+  };
+
   return (
     <div className="p-4">
       <h1 className="mb-4">Shop</h1>
@@ -19,7 +34,10 @@ const Shop = () => {
               <Card.Text>
                 Explore our wide range of product categories.
               </Card.Text>
-              <Button variant="primary">View Categories</Button>
+              {/* Update state and navigate to category-table */}
+              <Button variant="primary" onClick={handleCategoryClick}>
+                View Categories
+              </Button>
             </Card.Body>
           </Card>
         </Col>
@@ -37,7 +55,10 @@ const Shop = () => {
               <Card.Text>
                 Discover our extensive collection of products.
               </Card.Text>
-              <Button variant="primary">View Products</Button>
+              {/* Update state and navigate to product-table */}
+              <Button variant="primary" onClick={handleProductClick}>
+                View Products
+              </Button>
             </Card.Body>
           </Card>
         </Col>

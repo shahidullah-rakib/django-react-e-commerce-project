@@ -1,0 +1,5 @@
+/* Custom Active Link Color */
+.nav-link.active {
+  background-color: #007bff; /* Set custom background color for active tab */
+  color: white; /* Set text color for active tab */
+}

@@ -1,6 +1,7 @@
-// components/Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { Col } from 'react-bootstrap';
+import './Sidebar.css';
 
 const Sidebar = ({ activePage, setActivePage }) => {
   return (
@@ -27,60 +28,35 @@ const Sidebar = ({ activePage, setActivePage }) => {
         </div>
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a
-              href="#dashboard"
+            <Link
+              to="/admin-dashboard"
               className={`nav-link ${
-                activePage === 'dashboard' ? 'active bg-primary text-white' : ''
+                activePage === 'dashboard' ? 'active' : ''
               }`}
               onClick={() => setActivePage('dashboard')}
             >
               Dashboard
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
-              href="#shop"
-              className={`nav-link ${
-                activePage === 'shop' ? 'active bg-primary text-white' : ''
-              }`}
+            <Link
+              to="/admin-dashboard/shop"
+              className={`nav-link ${activePage === 'shop' ? 'active' : ''}`}
               onClick={() => setActivePage('shop')}
             >
               Shop
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
-              href="#widgets"
-              className={`nav-link ${
-                activePage === 'widgets' ? 'active bg-primary text-white' : ''
-              }`}
-              onClick={() => setActivePage('widgets')}
-            >
-              Widgets
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#elements"
-              className={`nav-link ${
-                activePage === 'elements' ? 'active bg-primary text-white' : ''
-              }`}
-              onClick={() => setActivePage('elements')}
-            >
-              Elements
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              href="#setting"
-              className={`nav-link ${
-                activePage === 'setting' ? 'active bg-primary text-white' : ''
-              }`}
+            <Link
+              to="/admin-dashboard/setting"
+              className={`nav-link ${activePage === 'setting' ? 'active' : ''}`}
               onClick={() => setActivePage('setting')}
             >
               Setting
-            </a>
+            </Link>
           </li>
+          {/* Add more items as needed */}
         </ul>
       </div>
     </Col>
